@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * klasa majaca liste produktow i umozliwiajaca dodawanie produktu do listy
+ */
 public class Facture {
     private final List<Product> produkty = new LinkedList<>();
     public void view(){

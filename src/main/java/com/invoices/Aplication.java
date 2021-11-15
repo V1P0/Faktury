@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * klasa odpowiedzialna za uruchamianie aplikacji, posiada dostęp do listy klientów i może aktywować wyświetlanie faktur lub dodawanie faktur dla danego klienta
+ * GRASP - niskie sprzezenie i wysoka spojnosc przez liniowe polaczenie klas Aplication -> Client -> Facture -> Product
+ */
 public class Aplication {
     private final List<Client> klienci = new LinkedList<>();
     private final Scanner scanner = new Scanner(System.in);

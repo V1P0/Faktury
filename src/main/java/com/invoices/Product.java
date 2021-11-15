@@ -1,5 +1,8 @@
 package com.invoices;
 
+/**
+ * klasa ktora przechowuje nazwe, ilosc i koszt produktu
+ */
 public class Product {
     private final String nazwa;
     private final int ilosc;

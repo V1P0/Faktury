@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * klasa posiadajaca liste faktur dla klienta i umozliwiajaca dodawanie nowych faktur
+ */
 public class Client {
     private final List<Facture> faktury = new LinkedList<>();
     private final String name,surname,address;
