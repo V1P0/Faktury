@@ -12,9 +12,17 @@ public class Product {
         this.nazwa=nazwa;
         this.cena=cena;
     }
+
+    /**
+     * funkcja zwracajaca koszt produktow
+     */
     public float summarizedCost(){
         return ilosc*cena;
     }
+
+    /**
+     *funkcja zwracajaca string z danymi produktu
+     */
     public String view(){
         return ilosc + " | " + nazwa + " | " + cena;
     }

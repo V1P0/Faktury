@@ -15,8 +15,11 @@ public class Aplication {
     public static void main(final String[] args) {
         new Aplication();
     }
-    public Aplication(){
 
+    /**
+     * petla podstawowych opcji programu
+     */
+    public Aplication(){
         while(true) {
             System.out.println("1 - Dodaj klienta");
             System.out.println("2 - Operacje na kliencie");
@@ -29,6 +32,10 @@ public class Aplication {
             }
         }
     }
+
+    /**
+     * funkcja dodajaca nowego klienta na liste
+     */
     public void addClient(){
         System.out.println("Podaj imie klienta:");
         final String name = scanner.nextLine();
@@ -38,6 +45,10 @@ public class Aplication {
         final String address = scanner.nextLine();
         klienci.add(new Client(name,surname,address));
     }
+
+    /**
+     * funkcja pozwalajaca dodac fakture do wybranego klienta lub wyswietlic jego faktury
+     */
     public void clientOperations(){
         final Client currentClient = chooseClient();
         while(true){
@@ -53,6 +64,10 @@ public class Aplication {
         }
 
     }
+
+    /**
+     * funkcja wypisujaca klientow i zwracajaca wybranego klienta
+     */
     public Client chooseClient(){
         int number = 0;
         for(final Client c : klienci){

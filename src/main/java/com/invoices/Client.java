@@ -8,18 +8,26 @@ import java.util.Scanner;
  * klasa posiadajaca liste faktur dla klienta i umozliwiajaca dodawanie nowych faktur
  */
 public class Client {
-    private final List<Facture> faktury = new LinkedList<>();
+    private final List<Invoice> faktury = new LinkedList<>();
     private final String name,surname,address;
     public Client(final String name,final  String surname, final String address){
         this.name = name;
         this.address = address;
         this.surname = surname;
     }
+
+    /**
+     * funkcja zwracajaca string z imieniem nazwiskiem i adresem klienta
+     */
     public String view(){
         return name + " " + surname + " " + address;
     }
+
+    /**
+     * funkcja dodajaca fakture do klienta
+     */
     public void addFacture(){
-        final Facture newFacture = new Facture();
+        final Invoice newFacture = new Invoice();
         final Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.println("1 - dodaj produkt");
@@ -29,13 +37,16 @@ public class Client {
                 newFacture.addProduct();
             }else{
                 faktury.add(newFacture);
-                scanner.close();
                 return;
             }
         }
     }
+
+    /**
+     * funkcja wyswietlajaca faktury klienta
+     */
     public void seeFactures(){
-        for(final Facture f : faktury){
+        for(final Invoice f : faktury){
             System.out.println("===================");
             f.view();
             System.out.println("Suma: " + f.koszt());
